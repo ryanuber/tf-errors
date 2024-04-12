@@ -1,8 +1,8 @@
 variable "foo" {
   type = string
   validation {
-    condition     = false
-    error_message = "It is impossible to satisfy this validation"
+    condition     = var.foo == "bar"
+    error_message = "Foo was not bar"
   }
 }
 
